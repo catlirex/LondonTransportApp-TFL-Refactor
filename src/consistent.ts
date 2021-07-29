@@ -4,13 +4,14 @@ export const createAPILink = (fromPoint: string, toPoint: string) =>
   `https://transportapi.com/v3/uk/public/journey/from/postcode:${fromPoint}/to/postcode:${toPoint}.json?app_id=7558d875&app_key=13aaeb933ff1d107d096127db22eccf7&service=tfl`;
 
 const LOCAL_DB = "http://localhost:4000";
+const HEROKU_DB = "https://london-transport-json-data.herokuapp.com";
 
 export function getUser(id: string) {
-  return fetch(`${LOCAL_DB}/users/${id}`).then((response) => response.json());
+  return fetch(`${HEROKU_DB}/users/${id}`).then((response) => response.json());
 }
 
 export function postUser(newUserDetail: LoginUserType) {
-  return fetch(`${LOCAL_DB}/users/`, {
+  return fetch(`${HEROKU_DB}/users/`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -23,7 +24,7 @@ export function postUser(newUserDetail: LoginUserType) {
 }
 
 export function patchUpdateUser(loginUserId: string, updatedUser: any) {
-  return fetch(`${LOCAL_DB}/users/${loginUserId}`, {
+  return fetch(`${HEROKU_DB}/users/${loginUserId}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
