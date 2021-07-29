@@ -1,6 +1,9 @@
 {
   "name": "londontransportapp-tfl-react-ts-zustand-reactleafet-styledcomponent",
   "version": "0.0.0",
+  "engines": {
+    "npm": "16.x"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
