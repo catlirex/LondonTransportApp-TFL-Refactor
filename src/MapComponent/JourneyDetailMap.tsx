@@ -22,7 +22,7 @@ export default function JourneyDetailMap({ result }: Props) {
   const updateMap = useStore((state) => state.updateMap);
 
   useEffect(() => {
-    if (map && mapCenterCoordinates)
+    if (map && mapCenterCoordinates.length)
       map?.flyTo(mapCenterCoordinates, zoomScaleControl, {
         duration: 1,
       });

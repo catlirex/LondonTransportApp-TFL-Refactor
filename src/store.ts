@@ -1,5 +1,6 @@
 import create from "zustand";
 import { createAPILink } from "./consistent";
+import Leaflet from "leaflet";
 
 export type RoutePartType = {
   mode: string;
@@ -56,9 +57,9 @@ type StoreType = {
   delLoginSearchHistory: (arg: SearchHistory[]) => void;
   mapCenterCoordinates: [number, number] | [];
   updateMapCenterCoordinates: (arg: [number, number]) => void;
-  map: Map | null;
-  updateMap: (arg: Map) => void;
-  zoomScaleControl: number | null;
+  map: Leaflet.Map | null;
+  updateMap: (arg: Leaflet.Map) => void;
+  zoomScaleControl: number | undefined;
   setZoomScaleControl: (zoomLevel: number) => void;
 };
 
@@ -109,7 +110,7 @@ const useStore = create<StoreType>((set, get) => ({
 
   map: null,
   updateMap: (newMap) => set({ map: newMap }),
-  zoomScaleControl: null,
+  zoomScaleControl: undefined,
   setZoomScaleControl: (zoomLevel) => set({ zoomScaleControl: zoomLevel }),
 }));
 
