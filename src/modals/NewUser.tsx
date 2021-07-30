@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 type Props = {
-  className: string;
+  className?: string;
 };
 
 function NewUser({ className }: Props) {
