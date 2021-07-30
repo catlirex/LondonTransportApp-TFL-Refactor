@@ -34,7 +34,7 @@ export function patchUpdateUser(loginUserId: string, updatedUser: any) {
 }
 
 type Image = {
-  [foot: string]: string;
+  [key: string]: string;
 };
 
 export const MODE_IMAGE: Image = {
@@ -58,7 +58,7 @@ export const MODE_IMAGE: Image = {
 };
 
 type Color = {
-  [foot: string]: { color: string };
+  [key: string]: { color: string };
 };
 
 export const PATH_COLOR: Color = {
