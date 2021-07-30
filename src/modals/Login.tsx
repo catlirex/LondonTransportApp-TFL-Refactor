@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 type Props = {
-  className: string;
+  className?: string;
 };
 
 function Login({ className }: Props) {

@@ -21,7 +21,7 @@ const modals: ModalsType = {
 };
 
 type Props = {
-  className: string;
+  className?: string;
 };
 
 function ModalContainer({ className }: Props) {

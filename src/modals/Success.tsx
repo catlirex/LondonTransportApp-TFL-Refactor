@@ -3,7 +3,7 @@ import DoneIcon from "@material-ui/icons/Done";
 import styled from "styled-components";
 
 type Props = {
-  className: string;
+  className?: string;
 };
 
 function Success({ className }: Props) {
