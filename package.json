@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview",
-    "start": "npm run dev",
+    "start": "npm run build",
     "preview": "vite preview --port 8080"
   },
   "dependencies": {
